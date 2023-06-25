@@ -5,3 +5,7 @@ from django.shortcuts import render
 def index(request):
     
     return HttpResponse('Главная страница')
+
+def CZ(request):
+    
+    return HttpResponse('Вторая страница')
