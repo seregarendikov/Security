@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/home/serega/Рабочий стол/Security/venv/bin/python" "$0" "$@"
+'''exec' "/home/serega/Рабочий стол/Security/venv/bin/python3" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
