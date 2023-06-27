@@ -3,5 +3,5 @@ from .views import *
 
 urlpatterns = [
     path('', index),
-    path('CZ', CZ),
+    path('CZ/<str:name>/', CZ),
 ]
