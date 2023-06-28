@@ -1,0 +1,25 @@
+html, body{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+
+
+div{
+    background-color: rgb(15, 15, 15);
+    height: 100px;
+}
+
+.menu{
+display: inline-flex;
+list-style-type: none;
+color: aliceblue;
+}
+
+li{
+    margin-left: 20px;
+}
