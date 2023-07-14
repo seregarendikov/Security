@@ -1,10 +1,79 @@
+
 {% extends 'ohrana/base.html' %}
 
 {% block content %}
-{% for p in posts %}
+{% load static %}
+<div class="content">
+    <div class="content-input">
+        <div class="inputs">
+            <div>
+                <div class="inputs_one">Где выявлено нарушение:</div>
+                <input list="cities" class="name_g" type="text" placeholder='на контрольно пропускном пункте "Установка Комплексной Подгодвки Газа"' style="width: 100%;" />
+                <datalist id="cities">
+                    <option value='на контрольно пропускном пункте "Установка Комплексной Подгодвки Газа"' />
+                    <option value="London" />
+                    <option value="Berlin" />
+                    <option value="New York" />
+                    <option value="Frattamaggiore" />
+                 </datalist>
+            </div>
+            <div>
+                <div class="inputs_one">Дата и время нарушения:</div>
+                <input class="name_d" type="text" placeholder="23 августа 2023 года в 12 часов 45 минут" style="width: 100%;">
+            </div>
+            <div>
+                <div class="inputs_one">ФИО нарушителя:</div>
+                <input placeholder="Иванов Иван Иванович" class="name_n" type="text"  style="width: 100%;">
+            </div>
+            <div>
+                <div class="inputs_one">Должность и организация:</div>
+                <input class="name_com" type="text" placeholder='слесарь ООО "ССК"' style="width: 100%;">
+            </div>
+            <div>
+                <div class="inputs_one">Номер пропуска:</div>
+                <input class="name_p" type="text" placeholder="55555" style="width: 100%;">
+            </div>
+            <div>
+                <div class="inputs_one">Совместно с охранником:</div>
+                <input class="name_s" type="text" placeholder="Петровым А.Г." style="width: 100%;">
+            </div>
+            <div>
+                <div class="inputs_one">Отметка заезда на ХРБ:</div>
+                <input type="text" style="width: 100%;" placeholder="12.06.2023">
+            </div>
+            <div class="input-avto">
+                <input class="box-avto" onclick="Chek()" type="checkbox" value="1">Авто
+                <div class="block-avto">
+                    <div>
+                        <div class="inputs_one">Марка:</div>
+                        <input type="text" style="width: 100%;" placeholder="Камаз">
+                    </div>
+                    <div>
+                        <div class="inputs_one">Гос.номер:</div>
+                        <input type="text" style="width: 100%;" placeholder="В 252 ОП 55">
+                    </div>
+                    <div>
+                        <div class="inputs_one">Организация:</div>
+                        <input type="text" style="width: 100%;" placeholder='ООО "ССК"'>
+                    </div>
+                </div>    
+            </div>
+            <div>
+                <input class="start" type="button" value="start" onclick="countRabbits()">
+                
+            </div>
+              
+        </div>    
 
+        <div>
+            <div><img class="ohrannic" src="{% static 'ohrana/images/Без_имени.png' %}"></div>
+        </div>  
+             
+    </div>  
+    <div class="sz"> 
 
-<p>{{p.id}}</p>
-    
-    {% endfor %}
+        <h3>{{person.title}}</h3>
+        <textarea class="text_sz" name="" id="" cols="80" rows="20">{{person.content}}</textarea>
+    </div>
+</div>    
 {% endblock %}

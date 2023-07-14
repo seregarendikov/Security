@@ -1,27 +1,34 @@
-{% load static %}
+
 
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{% static 'ohrana/css/styles.css' %}">
+    
 </head>
 <body>
-{% block mainmenu %}    
-<div>  
-<ul class="menu">
-    {% for m in menu %}
-    <li>
-        <a href="{% url m.url_name %}" class= "a">{{m.title}}</a>
-    </li>
-    {% endfor %}
-</ul>
-</div>  
-{% endblock %}
+<div class="list">
+    {% block mainmenu %}    
+    <div class="menu_head">  
+        <div>   
+            <ul class="menu">
+                {% for m in menu %}
+                <li>
+                    <a href="{% url m.url_name %}" class= "a">{{m.title}}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div> 
+    </div>  
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
+</div>    
 
-{% block content %}
-{% endblock %}
+<script type="text/javascript" src='{% static "ohrana/js/my.js" %}'></script>
 </body>
 </html>

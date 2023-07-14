@@ -1,0 +1,33 @@
+{% extends 'ohrana/base.html' %}
+
+
+{% block content %}
+{% if person.id == 1 %}
+    <h1>Действия при отключении электроэнергии</h1>
+{% elif person.id == 2 %} 
+    <h1>Действия при пожаре</h1>
+    
+{% endif %}
+<div class="block-incident">
+
+    <div class="incident">
+       <h3>{{person.content_1}}</h3>
+    </div>
+    <div class="incident">
+        <h3>{{person.content_2}}</h3>
+     </div>
+     <div class="incident">
+        <h3>{{person.content_3}}</h3>
+     </div>
+     <div class="incident">
+        <h3>{{person.content_4}}</h3>
+     </div>
+     <div class="incident">
+        <h3>{{person.content_5}}</h3>
+     </div>
+</div>     
+<div>
+    <h1>новый блок</h1>
+</div>
+
+{% endblock %}

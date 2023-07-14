@@ -6,12 +6,27 @@ html, body{
 	vertical-align: baseline;          /* приводим все к одной базовой линии */
 	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
 	font-size: 100%;                     /* размер шрифта всем одинаковый */
+	padding-left: 1%;
+	padding-right: 1%;
+	height: 100%;
+	background-color: #b8bdb8;
 }
 
+.list{
+	height: 100%;
+	width: 100%;
+	background-color: white;
+}
 
-div{
+.content{
+	background-color: rgb(235, 231, 228);
+	padding: 3%;
+}
+
+.menu_head{
     background-color: rgb(15, 15, 15);
     height: 100px;
+	font-size: x-large;
 }
 
 .menu{
@@ -26,4 +41,67 @@ li{
 .a{
     text-decoration: none;
     color: aliceblue;
+}
+.inputs{
+	font-size: 20px;
+	width: 50%;
+}
+.inputs_one{
+	margin-top: 2%;
+	font-weight:bold;
+}
+.start{
+	width: 50%;
+	margin-top: 10%;
+	background-color: green;
+	margin-left: 25%;
+	padding: 1%;
+    font-size: xx-large;
+}
+.content-input{
+	display: flex;
+}
+.input-avto{
+	margin-left: 10%;
+}
+.block-avto{
+	display: none;
+}
+
+.ohrannic{
+
+max-width: 100%;
+}
+
+.sz{
+	margin-left: 0%;
+}
+
+
+
+
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
+
+.incident{
+	background-color: #b8bdb8;
+	width: 20%;
+	height: 60%;
+	margin-left: 2%;
+	text-align: center;
+	margin-top: 2%;
+	border: solid;
+
+}
+
+.block-incident{
+	display: flex;
+	height: 20%;
+
+}
+.incident-list{
+	margin-left: 3%;
+}
+
+.list-violation{
+	margin-left: 3%;
 }

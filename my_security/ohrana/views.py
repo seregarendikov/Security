@@ -16,12 +16,16 @@ def violation(request):
     return render(request, 'ohrana/violation.html', {'posts':posts, 'menu':menu, 'title':'Нарушения'})
 
 def incident(request):
-    
-    return render(request, 'ohrana/incident.html', {'menu':menu, 'title':'Происшествия'})
+    post = My_Incid.objects.all()
+    return render(request, 'ohrana/incident.html', {'post':post, 'menu':menu, 'title':'Происшествия'})
 
 def show_post(request, post_id):
-  
-    return render(request, 'ohrana/cz.html', {'menu':menu, 'title':'Оформление'})
+    person = Sluzhebnaya_zapiska.objects.get(pk=post_id)
+    return render(request, 'ohrana/cz.html', {'menu':menu, 'title':'Оформление', 'person':person})
+
+def show_incid(request, post_id):
+    person = My_Incid.objects.get(pk=post_id)
+    return render(request, 'ohrana/incident_show.html', {'menu':menu, 'title':'Оформление', 'person':person})
 
 # def CZ(request, name):
 #     if (request.GET):
